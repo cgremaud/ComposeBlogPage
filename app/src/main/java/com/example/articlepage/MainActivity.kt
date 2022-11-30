@@ -14,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.articlepage.ui.theme.ArticlePageTheme
 
@@ -29,7 +30,7 @@ class MainActivity : ComponentActivity() {
                 ) {
                     Column() {
                         Row{ArticleHeader()}
-                        Row{ArticleBody(text = getString(R.string.paragraph_one))}
+                        Row{ArticleBody(text = stringResource(R.string.paragraph_one))}
                         Row{ArticleBody(text = getString(R.string.paragraph_two))}
                     }
 
@@ -52,7 +53,7 @@ fun ArticleHeader() {
 
 @Composable
 fun ArticleBody(text: String = "") {
-    Text(text = text    )
+    Text(text = text)
 }
 
 //@Preview(showBackground = true)
